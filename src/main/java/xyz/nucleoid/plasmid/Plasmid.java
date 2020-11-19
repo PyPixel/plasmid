@@ -40,6 +40,7 @@ import xyz.nucleoid.plasmid.game.rule.GameRule;
 import xyz.nucleoid.plasmid.game.rule.RuleResult;
 import xyz.nucleoid.plasmid.item.IncludeEntityItem;
 import xyz.nucleoid.plasmid.item.PlasmidItems;
+import xyz.nucleoid.plasmid.storage.FriendList;
 import xyz.nucleoid.plasmid.test.TestGame;
 
 public final class Plasmid implements ModInitializer {
@@ -64,6 +65,7 @@ public final class Plasmid implements ModInitializer {
 
     private void registerCallbacks() {
         CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> {
+            FriendCommand.register(dispatcher);
             MapCommand.register(dispatcher);
             GameCommand.register(dispatcher);
             PartyCommand.register(dispatcher);
