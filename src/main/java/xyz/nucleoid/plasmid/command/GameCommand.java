@@ -113,7 +113,6 @@ public final class GameCommand {
     private static int openGame(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
         ServerCommandSource source = context.getSource();
         MinecraftServer server = source.getMinecraftServer();
-
         Pair<Identifier, ConfiguredGame<?>> game = GameConfigArgument.get(context, "game_type");
 
         PlayerManager playerManager = server.getPlayerManager();

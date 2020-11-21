@@ -12,6 +12,7 @@ import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.integrated.IntegratedPlayerManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.text.LiteralText;
@@ -62,6 +63,7 @@ public final class Plasmid implements ModInitializer {
 
         this.registerCallbacks();
     }
+
 
     private void registerCallbacks() {
         CommandRegistrationCallback.EVENT.register((dispatcher, dedicated) -> {
